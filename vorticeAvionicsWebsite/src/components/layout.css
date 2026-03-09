@@ -1,0 +1,64 @@
+
+
+/* Tech Background */
+.tech-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.grid-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+    background-image: 
+        linear-gradient(rgba(0, 163, 224, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 163, 224, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    }
+
+.gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(0, 90, 140, 0.2), #0b0f14, #0b0f14);
+}
+
+.scan-lines {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.scan-lines-inner {
+    height: 100%;
+    width: 100%;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 163, 224, 0.3) 2px,
+        rgba(0, 163, 224, 0.3) 4px
+    );
+}
+
+.corner-glow-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33.333%;
+    height: 33.333%;
+    background-color: rgba(0, 163, 224, 0.05);
+    filter: blur(120px);
+}
+
+.corner-glow-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 25%;
+    background-color: rgba(0, 120, 180, 0.05);
+    filter: blur(100px);
+}
