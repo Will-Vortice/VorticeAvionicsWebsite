@@ -1,0 +1,161 @@
+.directory-container {
+  min-height: 100vh;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.directory-content {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.directory-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.directory-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #ffffff, #00A3E0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-family: "michroma";
+}
+
+.directory-subtitle {
+  color: #9ca3af;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.75;
+  font-family: "Exo 2";
+}
+
+.employee-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.employee-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.employee-card {
+  position: relative;
+  background: linear-gradient(to bottom right, rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.3));
+  border: 1px solid rgba(0, 163, 224, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s;
+  width: 320px;
+}
+
+.employee-card:hover {
+  border-color: rgba(0, 163, 224, 0.3);
+}
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0, 163, 224, 0), rgba(0, 163, 224, 0));
+  transition: background 0.3s;
+  pointer-events: none;
+}
+
+.employee-card:hover .card-glow {
+  background: linear-gradient(to bottom right, rgba(0, 163, 224, 0.05), transparent);
+}
+
+.card-glow-blur {
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(to bottom right, rgba(0, 163, 224, 0), transparent, transparent);
+  border-radius: 1rem;
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.employee-card:hover .card-glow-blur {
+  opacity: 1;
+  background: linear-gradient(to bottom right, rgba(0, 163, 224, 0.2), transparent, transparent);
+}
+
+.card-content {
+  position: relative;
+}
+
+.employee-photo-wrapper {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.employee-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.employee-card:hover .employee-photo {
+  transform: scale(1.05);
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.employee-name {
+  font-size: 1.25rem;
+  color: white;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+
+.employee-card:hover .employee-name {
+  color: #00A3E0;
+}
+
+.employee-title {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.employee-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: rgba(0, 163, 224, 0.8);
+  text-decoration: none;
+  margin-top: 0.75rem;
+  transition: color 0.3s;
+}
+
+.employee-email:hover {
+  color: #00A3E0;
+}
+
+.email-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .directory-title {
+    font-size: 3rem;
+  }
+}

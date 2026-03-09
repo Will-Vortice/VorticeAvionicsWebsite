@@ -1,7 +1,7 @@
 export const employees = [
     {
         name: "Aidan Sengupta",
-        title: "Co-Founder and CEO",
+        title: "Co-Founder & CEO",
         email: "a.sengupta@vorticeavionics.com",
         image: "",
     },
