@@ -76,6 +76,23 @@
   padding-bottom: 0.5rem;
 }
 
+.hero-typing {
+  display: inline-flex;
+  align-items: center;
+}
+
+.type-cursor {
+  margin-left: 4px;
+  color: white;
+  -webkit-text-fill-color: white;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,50%,100% { opacity:1 }
+  25%,75% { opacity:0 }
+}
+
 .headline-gradient {
   background: linear-gradient(90deg, #ffffff, #b3e0f5, #00A3E0);
   -webkit-background-clip: text;

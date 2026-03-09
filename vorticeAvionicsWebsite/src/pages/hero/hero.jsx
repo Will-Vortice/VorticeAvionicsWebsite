@@ -2,6 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { motion } from 'motion/react';
 import { ArrowRight, Radar } from 'lucide-react';
 import { useState } from "react";
+import Typewriter from "../../components/TypeWriter";
 import cutLogo from '../../assets/Vortice Avionics Logo Stack Colourlarge Just Logo.png';
 import './hero.css'
 
@@ -52,7 +53,7 @@ function Hero(){
                 transition={{ duration: 0.8, delay: 0.2 }}
                 >
                 <h1 className="home-headline">
-                    Advancing the future of defense/law enforcement through drone/UAV technologies
+                    Advancing the future of <Typewriter  words={["defense", "law enforcement"]} className="hero-typing"/>operations through UAV technologies
                 </h1>
                 </motion.div>
 
