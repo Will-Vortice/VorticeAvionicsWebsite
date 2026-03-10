@@ -1,4 +1,6 @@
-
+.page-layout{
+    overflow-x: hidden;
+}
 
 /* Tech Background */
 .tech-background {

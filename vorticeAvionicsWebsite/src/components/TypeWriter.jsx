@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import '../pages/hero/hero.css'
 
-function Typewriter({ words = [], className = "", typingSpeed = 100, deletingSpeed = 50, pauseTime = 4000 }) {
+function Typewriter({ words = [], className = "", typingSpeed = 40, deletingSpeed = 50, pauseTime = 4000 }) {
   const [wordIndex, setWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

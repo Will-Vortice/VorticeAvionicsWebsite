@@ -8,12 +8,27 @@ function Contact() {
     name: '',
     email: '',
     message: '',
+
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    alert('Thank you for your message. Our team will be in touch shortly.');
+    const data = new FormData(e.target);
+    data.append("access_key", "b55efb66-c655-4e15-a76c-ff8fbaaadac3");
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data
+    });
+    const respData = await response.json();
+    if(respData.success) {
+        alert('Thank you for your message. Our team will be in touch shortly.');
+    }
+    else{
+        alert('Error in sending message. Try again later');
+    }
+
+    
     setFormData({ name: '', email: '', message: '' });
   };
 

@@ -120,3 +120,142 @@
   height: 1px;
   background: linear-gradient(to right, transparent, #00A3E0, transparent);
 }
+
+/* Hamburger Menu Button - Hidden by default */
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s;
+  z-index: 30;
+}
+
+.hamburger-button:hover {
+  color: #00A3E0;
+}
+
+/* Mobile Menu - Hidden by default */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 73px; /* Below navbar */
+  right: 0;
+  width: 280px;
+  height: calc(100vh - 73px);
+  background: rgba(11, 15, 20, 0.98);
+  backdrop-filter: blur(12px);
+  border-left: 1px solid rgba(0, 163, 224, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 25;
+  overflow-y: auto;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  padding: 1rem;
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.mobile-nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-link.active {
+  color: #00A3E0;
+  background-color: rgba(0, 163, 224, 0.1);
+  border-color: rgba(0, 163, 224, 0.3);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Show hamburger menu, hide desktop nav */
+  .hamburger-button {
+    display: block;
+    padding: 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    top: 65px; /* Adjusted for smaller mobile navbar */
+    height: calc(100vh - 65px);
+    z-index: 25;
+  }
+
+  /* Adjust logo size for mobile */
+  .logo-image {
+    height: 40px;
+  }
+
+  .logo-icon-wrapper {
+    padding: 0.4rem;
+  }
+
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo-link {
+    padding: 0.25rem;
+  }
+
+  /* Adjust grid pattern for smaller screens */
+  .grid-pattern {
+    background-size: 30px 30px;
+  }
+
+  /* Container padding adjustment */
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small mobile adjustments */
+  .mobile-menu {
+    width: 100%;
+    border-left: none;
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+
+  .logo-image {
+    height: 35px;
+  }
+
+  .logo-icon-wrapper {
+    padding: 0.3rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+}

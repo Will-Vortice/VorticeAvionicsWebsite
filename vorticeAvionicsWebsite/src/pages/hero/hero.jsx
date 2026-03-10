@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Radar } from 'lucide-react';
 import { useState } from "react";
 import Typewriter from "../../components/TypeWriter";
+import HackerText from "../../components/HackerText";
 import cutLogo from '../../assets/Vortice Avionics Logo Stack Colourlarge Just Logo.png';
 import './hero.css'
 
