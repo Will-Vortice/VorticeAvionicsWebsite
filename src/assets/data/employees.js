@@ -1,46 +1,53 @@
-import defaultHeadshot from "../decoyHeadshot.jpg";
+import WilliamCharlesworth from "../People/WilliamCharlesworth.jpeg";
+import AidanSengupta from "../People/AidanSengupta.jpeg";
+import AadhiSathishkumar from "../People/AadhiSathishkumar.jpeg";
+import HarperReinhardt from "../People/HarperReinhardt.jpeg";
+import JiNi from "../People/JiNi.jpeg";
+import JesseOuyang from "../People/JesseOuyang.jpeg";
 
 export const employees = [
+        {
+        name: "William Charlesworth",
+        title: "Co-Founder",
+        email: "w.charlesworth@vorticeavionics.com",
+        image: WilliamCharlesworth,
+    },
+    
     {
         name: "Aidan Sengupta",
         title: "Co-Founder & CEO",
         email: "a.sengupta@vorticeavionics.com",
-        image: defaultHeadshot,
+        image: AidanSengupta,
     },
-    {
-        name: "William Charlesworth",
-        title: "Co-Founder",
-        email: "w.charlesworth@vorticeavionics.com",
-        image: defaultHeadshot,
-    },
+
     {
         name: "Parker Barnes",
         title: "COO",
         email: "p.barnes@vorticeavionics.com",
-        image: defaultHeadshot,
+        image: ParkerBarnes,
     },
     {
         name: "Harper Reinhardt",
         title: "CTO",
         email: null,
-        image: defaultHeadshot,
+        image: HarperReinhardt,
     },
     {
         name: "Jesse Ouyang",
         title: "GNC Programmer",
         email: null,
-        image: defaultHeadshot,
+        image: JesseOuyang,
     },
     {
         name: "Aadhi Sathishkumar",
         title: "Lead Electrical Engineer",
         email: null,
-        image: defaultHeadshot,
+        image: AadhiSathishkumar,
     },
     {
         name: "Ji Ni",
         title: "Sensing and Detection Engineer",
         email: null,
-        image: defaultHeadshot,
+        image: JiNi,
     },
 ];
