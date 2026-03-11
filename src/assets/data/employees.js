@@ -1,5 +1,6 @@
 import WilliamCharlesworth from "../People/WilliamCharlesworth.jpeg";
 import AidanSengupta from "../People/AidanSengupta.jpeg";
+import ParkerBarnes from "../People/ParkerBarnes.jpeg";
 import AadhiSathishkumar from "../People/AadhiSathishkumar.jpeg";
 import HarperReinhardt from "../People/HarperReinhardt.jpeg";
 import JiNi from "../People/JiNi.jpeg";
