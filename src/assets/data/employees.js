@@ -8,14 +8,14 @@ import JesseOuyang from "../People/JesseOuyang.jpeg";
 
 export const employees = [
 
-        {
+    {
         name: "Aidan Sengupta",
         title: "Co-Founder & CEO",
         email: "a.sengupta@vorticeavionics.com",
         image: AidanSengupta,
     },
         
-        {
+    {
         name: "William Charlesworth",
         title: "Co-Founder",
         email: "w.charlesworth@vorticeavionics.com",
