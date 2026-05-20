@@ -338,7 +338,8 @@
 
 @media (max-width: 480px) {
   .contact-container {
-    padding: 2rem 0.75rem;
+    padding: 1rem 0.5rem;
+    margin: auto;
   }
 
   .contact-title {
@@ -349,8 +350,13 @@
     font-size: 0.85rem;
   }
 
+  .contact-grid{
+    
+    padding: auto;
+  }
+
   .info-card {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .info-card-inner {

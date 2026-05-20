@@ -54,7 +54,7 @@ function Hero(){
                 transition={{ duration: 0.8, delay: 0.2 }}
                 >
                 <h1 className="home-headline">
-                    Advancing the future of <Typewriter  words={["defense", "law enforcement"]} className="hero-typing"/>operations through UAV technologies
+                    Advancing the future of defense operations through UAV technologies
                 </h1>
                 </motion.div>
 

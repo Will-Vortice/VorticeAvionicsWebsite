@@ -5,9 +5,8 @@ import './directory.css';
 
 // Organize employees into rows: 2-3-2 hexagonal pattern
 const employeeRows = [
-  employees.slice(0, 2),  // Row 1: First 2 (Co-founders)
-  employees.slice(2, 5),  // Row 2: Next 3
-  employees.slice(5, 7),  // Row 3: Last 2
+  employees.slice(0, 3),  // Row 1: First 2 (Co-founders)
+  employees.slice(3, 6),  // Row 2: Next 3
 ];
 
 function Directory() {

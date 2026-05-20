@@ -7,14 +7,6 @@ import JiNi from "../People/JiNi.jpeg";
 import JesseOuyang from "../People/JesseOuyang.JPEG";
 
 export const employees = [
-
-    {
-        name: "Aidan Sengupta",
-        title: "Co-Founder & CEO",
-        email: "a.sengupta@vorticeavionics.com",
-        image: AidanSengupta,
-    },
-        
     {
         name: "William Charlesworth",
         title: "Co-Founder",
