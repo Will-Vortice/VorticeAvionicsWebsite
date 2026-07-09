@@ -31,7 +31,6 @@ function Navbar() {
         <div className="nav-links">
           {[
             { name: 'Home', path: '/' },
-            { name: 'Directory', path: '/directory' },
             { name: 'Contact', path: '/contact' },
           ].map((link) => (
             <Link
@@ -60,7 +59,6 @@ function Navbar() {
         <div className="mobile-menu-links">
           {[
             { name: 'Home', path: '/' },
-            { name: 'Directory', path: '/directory' },
             { name: 'Contact', path: '/contact' },
           ].map((link) => (
             <Link
