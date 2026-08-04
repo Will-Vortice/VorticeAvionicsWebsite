@@ -1,23 +1,38 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif, "Exo 2", "Michroma", "inter";
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif, 'Exo 2', 'Michroma';
+  color: #eff6ff;
+  background-color: #02050c;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-x: none;
 }
 
-body{
-  height: 100vh;
-  /* overflow-y: hidden; */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #02050c;
+  margin: 0;
+  color: #eff6ff;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }

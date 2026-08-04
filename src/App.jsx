@@ -9,6 +9,7 @@ import Contact from './pages/contact/contact'
 import './App.css'
 import "@fontsource/exo-2";
 import "@fontsource/inter";
+import "@fontsource/teko";
 import "@fontsource/michroma"
 
 function App() {
