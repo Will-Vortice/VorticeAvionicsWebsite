@@ -1,0 +1,294 @@
+.riflebird-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #040609;
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+.riflebird-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(4, 6, 9, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.riflebird-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.riflebird-logo-link {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.riflebird-logo {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
+
+.riflebird-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  flex: 1;
+}
+
+.riflebird-nav-link {
+  position: relative;
+  color: rgba(242, 242, 242, 0.8);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.riflebird-nav-link:hover {
+  color: #009bde;
+}
+
+.riflebird-nav-link.active {
+  color: #009bde;
+}
+
+.riflebird-nav-underline {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #009bde;
+}
+
+.riflebird-request-info-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid #009bde;
+  color: #009bde;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 180ms ease;
+}
+
+.riflebird-request-info-link:hover {
+  background: #009bde;
+  color: #040609;
+}
+
+.riflebird-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #f2f2f2;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.riflebird-mobile-menu {
+  display: none;
+  padding: 1rem;
+  background: rgba(4, 6, 9, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.riflebird-mobile-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: rgba(242, 242, 242, 0.8);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+}
+
+.riflebird-mobile-link.active {
+  color: #009bde;
+}
+
+.riflebird-content {
+  padding-top: 5rem;
+  min-height: 100vh;
+}
+
+.riflebird-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.riflebird-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 620px;
+}
+
+.riflebird-breadcrumb {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #009bde;
+  text-transform: uppercase;
+}
+
+.riflebird-title {
+  margin: 0;
+  font-family: 'Teko', sans-serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.riflebird-subtitle {
+  margin: 0;
+  font-family: 'Teko', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2.2rem);
+  letter-spacing: 0.5px;
+  color: rgba(242, 242, 242, 0.85);
+  text-transform: uppercase;
+}
+
+.riflebird-description {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(242, 242, 242, 0.85);
+}
+
+.riflebird-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.riflebird-primary-cta,
+.riflebird-secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.5rem;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.riflebird-primary-cta {
+  background: #009bde;
+  color: white;
+  border: 1px solid #009bde;
+}
+
+.riflebird-primary-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 155, 222, 0.3);
+}
+
+.riflebird-secondary-cta {
+  background: transparent;
+  color: #009bde;
+  border: 1px solid #009bde;
+}
+
+.riflebird-secondary-cta:hover {
+  background: rgba(0, 155, 222, 0.1);
+}
+
+.riflebird-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.riflebird-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(1.1) contrast(1.05);
+}
+
+@media (max-width: 1024px) {
+  .riflebird-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .riflebird-nav-links {
+    display: none;
+  }
+
+  .riflebird-hamburger {
+    display: flex;
+  }
+
+  .riflebird-mobile-menu.open {
+    display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  .riflebird-nav-container {
+    padding: 0.8rem 1rem;
+    gap: 1rem;
+  }
+
+  .riflebird-title {
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
+  }
+
+  .riflebird-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  }
+
+  .riflebird-hero {
+    padding: 1.5rem;
+  }
+
+  .riflebird-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .riflebird-primary-cta,
+  .riflebird-secondary-cta {
+    width: 100%;
+  }
+}
