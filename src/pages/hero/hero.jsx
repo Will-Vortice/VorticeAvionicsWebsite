@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 import logo from '../../assets/OldLogos/Vortice Avionics Logo Wide Whitelarge.png'
 import './hero.css'
 
@@ -105,6 +106,27 @@ function ProductSpotlight() {
 }
 
 export default function Hero() {
+  const overlayRef = useRef(null)
+  const solutionRef = useRef(null)
+
+  useEffect(() => {
+    function onScroll() {
+      if (!overlayRef.current || !solutionRef.current) return
+      const rect = solutionRef.current.getBoundingClientRect()
+      const vh = window.innerHeight || document.documentElement.clientHeight
+      const progress = Math.min(Math.max(1 - rect.top / vh, 0), 1)
+      overlayRef.current.style.height = `${progress * 100}%`
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+    }
+  }, [])
+
   return (
     <div className="hero-page">
       <div className="hero-page-background" aria-hidden="true">
@@ -169,8 +191,8 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="solution-section" aria-labelledby="solution-title">
-        <div className="solution-overlay" aria-hidden="true" />
+      <section className="solution-section" aria-labelledby="solution-title" ref={solutionRef}>
+        <div ref={overlayRef} className="solution-overlay" aria-hidden="true" />
         <div className="solution-shell">
           <div className="solution-copy-panel">
             <p className="solution-label">SOLUTION</p>
