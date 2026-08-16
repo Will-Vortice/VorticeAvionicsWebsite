@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
+import { useContactModal } from '../../contexts/ContactModalProvider'
 import { useEffect, useRef } from 'react'
-import logo from '../../assets/OldLogos/Vortice Avionics Logo Wide Whitelarge.png'
+import Navbar from '../../components/nav/nav'
+import backgroundImage from '../../assets/stock_soldier_drone.jpeg'
 import './hero.css'
 
-const backgroundImage = 'http://localhost:3845/assets/fdcc98e19885314573d62df61067936b14104497.png'
 const cardImage = 'http://localhost:3845/assets/ec70dd6be55cb1f9185847cc294953611069591c.png'
 const solutionImageMain = 'http://localhost:3845/assets/339f365f2ae1c77d49742bc59b0009ff7947345f.png'
 const solutionImageFeature = 'http://localhost:3845/assets/b4853ad635f3facc89950e9270a1edf47cbc48a9.png'
@@ -52,6 +53,15 @@ const solutionStages = [
 ]
 
 function HeroButton({ children, variant = 'primary', to = '/contact' }) {
+  const { openContact } = useContactModal()
+  if (to === '/contact') {
+    return (
+      <button className={`hero-button ${variant}`} onClick={openContact}>
+        {children}
+      </button>
+    )
+  }
+
   return (
     <Link className={`hero-button ${variant}`} to={to}>
       {children}
@@ -110,18 +120,33 @@ export default function Hero() {
   const solutionRef = useRef(null)
 
   useEffect(() => {
-    function onScroll() {
+    let rafId = null
+    let debounceId = null
+
+    function updateOverlayImmediate() {
       if (!overlayRef.current || !solutionRef.current) return
       const rect = solutionRef.current.getBoundingClientRect()
       const vh = window.innerHeight || document.documentElement.clientHeight
-      const progress = Math.min(Math.max(1 - rect.top / vh, 0), 1)
-      overlayRef.current.style.height = `${progress * 100}%`
+      const targetHeight = Math.min(Math.max(((vh - rect.top) / vh) * 1.2, 0), 1)
+      overlayRef.current.style.height = `${targetHeight * 100}%`
     }
 
-    onScroll()
+    function onScroll() {
+      // schedule update on next animation frame, then debounce the actual update
+      if (rafId) cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(() => {
+        if (debounceId) clearTimeout(debounceId)
+        // small debounce to reduce visible stutter on very fast scrolls
+        debounceId = setTimeout(updateOverlayImmediate, 60)
+      })
+    }
+
+    updateOverlayImmediate()
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
     return () => {
+      if (rafId) cancelAnimationFrame(rafId)
+      if (debounceId) clearTimeout(debounceId)
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
     }
@@ -132,29 +157,11 @@ export default function Hero() {
       <div className="hero-page-background" aria-hidden="true">
         <img src={backgroundImage} alt="" />
       </div>
+      <div ref={overlayRef} className="hero-page-overlay" aria-hidden="true" />
 
       <section className="hero-section" aria-labelledby="hero-title">
         <div className="hero-shell">
-          <header className="hero-header">
-            <Link to="/" className="hero-brand" aria-label="Vortice Avionics home">
-              <img src={logo} alt="Vortice Avionics" />
-            </Link>
-
-            <nav className="hero-nav" aria-label="Primary navigation">
-              <Link className="hero-nav-link active" to="/">
-                Home
-              </Link>
-              <Link className="hero-nav-link" to="/about">
-                About
-              </Link>
-              <Link className="hero-nav-link" to="/contact">
-                Contact Us
-              </Link>
-              <Link className="hero-nav-request" to="/contact">
-                Request Info
-              </Link>
-            </nav>
-          </header>
+          <Navbar variant="hero" requestLabel="Request Info" requestPath="/contact" />
 
           <div className="hero-body">
             <div className="hero-copy">
@@ -192,7 +199,6 @@ export default function Hero() {
       </section>
 
       <section className="solution-section" aria-labelledby="solution-title" ref={solutionRef}>
-        <div ref={overlayRef} className="solution-overlay" aria-hidden="true" />
         <div className="solution-shell">
           <div className="solution-copy-panel">
             <p className="solution-label">SOLUTION</p>
