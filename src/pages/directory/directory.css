@@ -142,6 +142,7 @@
   color: rgba(0, 163, 224, 0.8);
   text-decoration: none;
   margin-top: 0.75rem;
+  overflow-wrap: anywhere;
   transition: color 0.3s;
 }
 

@@ -588,6 +588,16 @@
   }
 
   @media (max-width: 720px) {
+    .hero-shell {
+      width: min(100% - 2rem, 1400px);
+      gap: 2rem;
+    }
+
+    .hero-body {
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+
     .hero-shell,
     .solution-shell,
     .product-shell {
@@ -595,7 +605,12 @@
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.35rem, 8vw, 3rem);
+      font-size: clamp(3.2rem, 14vw, 5rem);
+    }
+
+    .hero-description {
+      font-size: .95rem;
+      line-height: 1.6;
     }
 
     .hero-actions {
@@ -604,6 +619,23 @@
 
     .hero-button {
       width: 100%;
+      min-width: 0;
+    }
+
+    .hero-card {
+      width: 100%;
+      min-height: 100px;
+      padding: .75rem;
+    }
+
+    .hero-card-image,
+    .hero-card-image img {
+      width: 72px;
+      height: 72px;
+    }
+
+    .hero-card p {
+      white-space: normal;
     }
 
     .hero-features,
@@ -621,6 +653,83 @@
       right: auto;
       top: 1rem;
       transform: none;
+    }
+
+    .hero-feature + .hero-feature {
+      border-left: 0;
+      border-top: 1px solid rgba(242, 242, 242, .1);
+      padding: 1rem 0 0;
+    }
+
+    .hero-feature-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .hero-feature-copy p {
+      max-width: none;
+    }
+
+    .solution-section {
+      padding: 3rem 0;
+    }
+
+    .solution-shell,
+    .product-shell {
+      width: min(100% - 2rem, 1400px);
+    }
+
+    .solution-shell h2,
+    .product-shell h2 {
+      font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+    .solution-description,
+    .product-copy p {
+      font-size: .95rem;
+      line-height: 1.6;
+    }
+
+    .solution-cta {
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .solution-media-frame {
+      min-height: 260px;
+    }
+
+    .solution-stages {
+      width: min(100% - 2rem, 1400px);
+      margin: 2rem auto 0;
+      padding: 0;
+    }
+
+    .solution-stage,
+    .solution-stage-content {
+      min-height: 250px;
+    }
+
+    .solution-stage-content {
+      grid-template-columns: minmax(0, 1fr) minmax(110px, .9fr);
+      padding: 1rem .75rem 0 1rem;
+    }
+
+    .solution-stage h3 {
+      font-size: 2.25rem;
+    }
+
+    .solution-stage p {
+      font-size: .8rem;
+    }
+
+    .product-section {
+      padding: 1rem 0 3rem;
+    }
+
+    .product-shell {
+      grid-template-columns: 1fr;
+      padding: 1.25rem;
     }
 
     .solution-media-accent.top {
@@ -657,7 +766,7 @@
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.35rem, 8vw, 3rem);
+      font-size: clamp(3.2rem, 14vw, 5rem);
     }
 
     .hero-actions {

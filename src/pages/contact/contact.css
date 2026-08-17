@@ -180,7 +180,7 @@
 
 .form-input,
 .form-textarea {
-  width: 94%;
+  width: 100%;
   padding: 0.75rem 1rem;
   background-color: rgba(17, 24, 39, 0.5);
   border: 1px solid rgba(0, 163, 224, 0.2);
@@ -351,8 +351,7 @@
   }
 
   .contact-grid{
-    
-    padding: auto;
+    gap: 1.25rem;
   }
 
   .info-card {
@@ -380,6 +379,7 @@
   .info-value,
   .info-value-link {
     font-size: 0.85rem;
+    overflow-wrap: anywhere;
   }
 
   .contact-form-wrapper {

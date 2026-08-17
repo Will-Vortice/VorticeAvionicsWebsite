@@ -511,8 +511,9 @@
   }
 
   .contact-modal {
+    width: 100%;
     padding: 28px 22px;
-    max-height: 90vh;
+    max-height: calc(100dvh - 30px);
     overflow-y: auto;
   }
 
