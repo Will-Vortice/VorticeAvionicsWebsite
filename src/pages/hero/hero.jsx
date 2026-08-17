@@ -2,10 +2,15 @@ import { Link } from 'react-router-dom'
 import { useContactModal } from '../../contexts/ContactModalProvider'
 import { useEffect, useRef } from 'react'
 import Navbar from '../../components/nav/nav'
-import backgroundImage from '../../assets/stock_soldier_drone.jpeg'
+import backgroundImage from '../../assets/Frame 6.png'
+import MissionReadyImg from '../../assets/MissionReadyImg.png'
+import SoldierDiscretionIcon from "../../assets/soldierDiscretionImg.png"
+import ContestedEnvIcon from "../../assets/contestedEnvImg.png"
+import PrecisionIcon from "../../assets/PrecisionImg.png"
+import LowCostIcon from "../../assets/costImg.png"
 import './hero.css'
 
-const cardImage = 'http://localhost:3845/assets/ec70dd6be55cb1f9185847cc294953611069591c.png'
+const cardImage = '../../assets/MissionReadyImg.png'
 const solutionImageMain = 'http://localhost:3845/assets/339f365f2ae1c77d49742bc59b0009ff7947345f.png'
 const solutionImageFeature = 'http://localhost:3845/assets/b4853ad635f3facc89950e9270a1edf47cbc48a9.png'
 const solutionImageAccent = 'http://localhost:3845/assets/1c4af0bf75adc753fad7eda10220e2d4941eb93f.png'
@@ -15,22 +20,22 @@ const featureItems = [
   {
     title: 'Soldier discretion',
     description: 'The soldier decides when and where to strike.',
-    icon: 'http://localhost:3845/assets/5fe7e64cbac1c0260ab97fec8ce80edaccbde682.png',
+    icon: SoldierDiscretionIcon,
   },
   {
     title: 'Contested environments',
     description: 'Operates in GPS denied and signal contested environments.',
-    icon: 'http://localhost:3845/assets/6ee4cf958196cb989530d465c042b15ad3d2eaf6.png',
+    icon: ContestedEnvIcon,
   },
   {
     title: 'Precision effects',
     description: 'Delivers high precision strikes on target.',
-    icon: 'http://localhost:3845/assets/9c7f3ff49f2a12e3faf4a930a6c9fa06cd1dedc1.png',
+    icon: PrecisionIcon,
   },
   {
     title: 'Low cost',
     description: 'Affordable, highly replenishable systems.',
-    icon: 'http://localhost:3845/assets/662ff929d89e093cda1f5774052a7bd915f73e8d.png',
+    icon: LowCostIcon,
   },
 ]
 
@@ -161,12 +166,12 @@ export default function Hero() {
 
       <section className="hero-section" aria-labelledby="hero-title">
         <div className="hero-shell">
-          <Navbar variant="hero" requestLabel="Request Info" requestPath="/contact" />
+          <Navbar requestLabel="Request Info" requestPath="/contact" />
 
           <div className="hero-body">
             <div className="hero-copy">
-              <p className="hero-kicker">RIFLEBIRD</p>
               <h1 id="hero-title">Precise strikes. Soldier controlled.</h1>
+              <h1 id="hero-title"> </h1>
               <p className="hero-description">
                 RifleBird is a semi-autonomous UAV strike system that enables soldiers to deliver precise effects with minimal training and maximum impact anywhere, anytime.
               </p>
@@ -181,11 +186,12 @@ export default function Hero() {
 
             <aside className="hero-card" aria-label="Mission ready overview">
               <div className="hero-card-image">
-                <img src={cardImage} alt="Mission ready system" />
+                <img src={MissionReadyImg} alt="Mission ready system" />
               </div>
               <div className="hero-card-body">
-                <h2>Mission ready</h2>
-                <p>GPS denied. Signal contested. Always on mission.</p>
+                <h2>Mission Ready</h2>
+                <p>GPS denied. Signal contested.</p>
+                <p>Always on mission</p>
               </div>
             </aside>
           </div>

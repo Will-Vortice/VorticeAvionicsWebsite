@@ -10,7 +10,7 @@ export default function RifleBird() {
 
   return (
     <div className="riflebird-page">
-      <Navbar variant="riflebird" requestLabel="REQUEST INFO" requestPath="/contact" />
+      <Navbar requestLabel="REQUEST INFO" requestPath="/contact" />
 
       <main className="riflebird-content">
         <section className="riflebird-hero">

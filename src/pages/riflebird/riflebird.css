@@ -9,127 +9,8 @@
   overflow-x: hidden;
 }
 
-.riflebird-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(4, 6, 9, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.riflebird-nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 1.5rem;
-  max-width: 1600px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
-.riflebird-logo-link {
-  display: inline-flex;
-  flex-shrink: 0;
-}
-
-.riflebird-logo {
-  height: 2.5rem;
-  width: auto;
-  display: block;
-}
-
-.riflebird-nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.8rem;
-  flex: 1;
-}
-
-.riflebird-nav-link {
-  position: relative;
-  color: rgba(242, 242, 242, 0.8);
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: color 180ms ease;
-}
-
-.riflebird-nav-link:hover {
-  color: #009bde;
-}
-
-.riflebird-nav-link.active {
-  color: #009bde;
-}
-
-.riflebird-nav-underline {
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #009bde;
-}
-
-.riflebird-request-info-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6rem 1.1rem;
-  border: 1px solid #009bde;
-  color: #009bde;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: all 180ms ease;
-}
-
-.riflebird-request-info-link:hover {
-  background: #009bde;
-  color: #040609;
-}
-
-.riflebird-hamburger {
-  display: none;
-  background: none;
-  border: none;
-  color: #f2f2f2;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.riflebird-mobile-menu {
-  display: none;
-  padding: 1rem;
-  background: rgba(4, 6, 9, 0.98);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.riflebird-mobile-link {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: rgba(242, 242, 242, 0.8);
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 0.06em;
-}
-
-.riflebird-mobile-link.active {
-  color: #009bde;
-}
-
 .riflebird-content {
-  padding-top: 5rem;
+  padding-top: 6rem;
   min-height: 100vh;
 }
 
@@ -250,26 +131,9 @@
     gap: 2rem;
     padding: 2rem;
   }
-
-  .riflebird-nav-links {
-    display: none;
-  }
-
-  .riflebird-hamburger {
-    display: flex;
-  }
-
-  .riflebird-mobile-menu.open {
-    display: block;
-  }
 }
 
 @media (max-width: 720px) {
-  .riflebird-nav-container {
-    padding: 0.8rem 1rem;
-    gap: 1rem;
-  }
-
   .riflebird-title {
     font-size: clamp(2.5rem, 7vw, 3.5rem);
   }
