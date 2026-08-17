@@ -1,11 +1,6 @@
-import { createContext, useContext, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { ContactModalContext } from './useContactModal'
 import './contactModal.css'
-
-const ContactModalContext = createContext(null)
-
-export function useContactModal() {
-  return useContext(ContactModalContext)
-}
 
 export default function ContactModalProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false)

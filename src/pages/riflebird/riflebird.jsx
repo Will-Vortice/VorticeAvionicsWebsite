@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/nav/nav'
 import Footer from '../../components/footer/footer'
-import { useContactModal } from '../../components/contact/ContactModalProvider'
+import { useContactModal } from '../../components/contact/useContactModal'
 import './riflebird.css'
 
-const productImage = 'http://localhost:3845/assets/b4853ad635f3facc89950e9270a1edf47cbc48a9.png'
+import productImage from '../../assets/RifleBirdBackground.png'
 
 export default function RifleBird() {
   const { openContact } = useContactModal()

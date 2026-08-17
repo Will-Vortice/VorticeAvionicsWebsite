@@ -1,5 +1,4 @@
-import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, Send } from 'lucide-react';
 import { useState } from 'react';
 import './contact.css';
 

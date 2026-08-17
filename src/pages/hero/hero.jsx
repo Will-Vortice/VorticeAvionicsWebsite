@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useContactModal } from '../../components/contact/ContactModalProvider'
+import { useContactModal } from '../../components/contact/useContactModal'
 import Navbar from '../../components/nav/nav'
 import backgroundImage from '../../assets/Frame 6.png'
 import MissionReadyImg from '../../assets/MissionReadyImg.png'

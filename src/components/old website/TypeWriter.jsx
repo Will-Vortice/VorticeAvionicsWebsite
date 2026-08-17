@@ -29,8 +29,10 @@ function Typewriter({ words = [], className = "", typingSpeed = 40, deletingSpee
     } 
     else if (isDeleting && displayText.length === 0) {
       // Move to next word
-      setIsDeleting(false);
-      setWordIndex((prev) => (prev + 1) % words.length);
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+      }, 0);
     }
 
     return () => clearTimeout(timeout);

@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Mail } from 'lucide-react';
 import { employees } from '../../../assets/data/employees.js';
 import './directory.css';

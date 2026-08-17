@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useContactModal } from '../contact/ContactModalProvider'
+import { useContactModal } from '../contact/useContactModal'
 import logo from '../../assets/OldLogos/Vortice Avionics Logo Wide Whitelarge.png'
 import './footer.css'
 

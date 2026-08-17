@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { useContactModal } from '../contact/ContactModalProvider'
+import { useContactModal } from '../contact/useContactModal'
 import logo from '../../assets/OldLogos/Vortice Avionics Logo Wide Whitelarge.png'
 import './nav.css'
 
@@ -10,7 +10,7 @@ const defaultLinks = [
   { name: 'RifleBird', path: '/riflebird' },
 ]
 
-function Navbar({ variant = 'default', links = defaultLinks, requestLabel = 'Request Info', requestPath = '/contact' }) {
+function Navbar({ links = defaultLinks, requestLabel = 'Request Info' }) {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
