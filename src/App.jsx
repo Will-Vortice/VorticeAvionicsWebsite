@@ -4,7 +4,7 @@ import Layout from './components/layout'
 import Hero from './pages/hero/hero'
 import RifleBird from './pages/riflebird/riflebird'
 import Directory from './pages/directory/directory'
-import ContactModalProvider from './contexts/ContactModalProvider'
+import ContactModalProvider from './components/contact/ContactModalProvider'
 
 import './App.css'
 import "@fontsource/exo-2";

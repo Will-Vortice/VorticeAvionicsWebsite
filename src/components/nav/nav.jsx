@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { useContactModal } from '../../contexts/ContactModalProvider'
+import { useContactModal } from '../contact/ContactModalProvider'
 import logo from '../../assets/OldLogos/Vortice Avionics Logo Wide Whitelarge.png'
 import './nav.css'
 

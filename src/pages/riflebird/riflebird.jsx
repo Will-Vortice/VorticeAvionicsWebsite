@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/nav/nav'
-import { useContactModal } from '../../contexts/ContactModalProvider'
+import Footer from '../../components/footer/footer'
+import { useContactModal } from '../../components/contact/ContactModalProvider'
 import './riflebird.css'
 
 const productImage = 'http://localhost:3845/assets/b4853ad635f3facc89950e9270a1edf47cbc48a9.png'
@@ -38,6 +39,7 @@ export default function RifleBird() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   )
 }

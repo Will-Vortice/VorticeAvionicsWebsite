@@ -1,13 +1,14 @@
 :root {
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif, 'Exo 2', 'Michroma';
   color: #eff6ff;
-  background-color: #02050c;
+  background-color: #040609;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  overscroll-behavior-y: none;
 }
 
 * {
@@ -16,9 +17,15 @@
 
 body {
   min-height: 100vh;
-  background: #02050c;
+  background: #040609;
   margin: 0;
   color: #eff6ff;
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100vh;
+  background: #040609;
 }
 
 a {
