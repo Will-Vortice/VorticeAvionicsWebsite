@@ -11,7 +11,7 @@ import DeployIcon from '../../assets/DeployIcon.png'
 import EngageIcon from '../../assets/EngageIcon.png'
 import StrikeIcon from '../../assets/StrikeIcon.png'
 import solutionImageMain from '../../assets/RifleBirdBackground.png'
-import solutionImageFeature from '../../assets/TransparentRifleBirdFlying.webm'
+import solutionImageFeature from '../../assets/transparentRifleBirdFlying.webm'
 import blueprint from '../../assets/stockBlueprint.png'
 import './hero.css'
 
