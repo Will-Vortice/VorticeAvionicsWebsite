@@ -12,13 +12,14 @@ import EngageIcon from '../../assets/EngageIcon.png'
 import StrikeIcon from '../../assets/StrikeIcon.png'
 import blueprintImage from '../../assets/stockBlueprint.png'
 import theaterImage from '../../assets/Theater.png'
-import galleryOne from '../../assets/stock_drone_tanks.jpeg'
-import galleryTwo from '../../assets/stock_soldier_drone.jpeg'
-import galleryThree from '../../assets/stock_soldiers.png'
-import galleryFour from '../../assets/RifleBirdBackground.png'
+import galleryOne from '../../assets/droneRenders/Back NegAng.png'
+import galleryTwo from '../../assets/droneRenders/Back PosAng.png'
+import galleryThree from '../../assets/droneRenders/CloseFront NegAng.png'
+import galleryFour from '../../assets/droneRenders/FarFront PosAng.png'
+import galleryFive from '../../assets/droneRenders/Front NegAng.png'
+import gallerySix from '../../assets/droneRenders/Front PosAng.png'
 import RifleBirdFlying from '../../assets/TransparentRifleBirdFlying.webm'
 
-const productImage = 'http://localhost:3845/assets/b4853ad635f3facc89950e9270a1edf47cbc48a9.png'
 
 const capabilities = [
   ['Soldier discretion', 'The soldier decides when and where to strike.', SoldierDiscretionIcon],
@@ -43,7 +44,7 @@ const specifications = [
   ['Environments', 'EW Contested / GPS Denied'], ['Reusability', 'No (Low Cost, Expendable)'],
 ]
 
-const galleryImages = [galleryOne, galleryTwo, galleryThree, galleryFour, theaterImage, productImage]
+const galleryImages = [galleryOne, galleryTwo, galleryThree, galleryFour, galleryFive, gallerySix]
 
 export default function RifleBird() {
   const { openContact } = useContactModal()
@@ -123,7 +124,7 @@ export default function RifleBird() {
         <section className="riflebird-media-grid">
           <article className="riflebird-panel gallery-panel">
             <p className="riflebird-section-label">GALLERY</p>
-            <div className="gallery-tabs"><span className="active">ALL</span><span>RENDER</span><span>FIELD</span><span>DETAILS</span></div>
+            <div className="gallery-tabs"></div>
             <div className="gallery-grid">
               {galleryImages.map((image, index) => <img key={`${image}-${index}`} src={image} alt={`RifleBird gallery ${index + 1}`} />)}
             </div>
@@ -134,18 +135,18 @@ export default function RifleBird() {
               <p className="riflebird-section-label">BLUEPRINTS</p>
               <img src={blueprintImage} alt="RifleBird technical blueprint" />
             </article>
-            <article className="riflebird-panel overview-panel">
+            {/* <article className="riflebird-panel overview-panel">
               <p className="riflebird-section-label">PRODUCT OVERVIEW</p>
               <div className="overview-image"><img src={galleryTwo} alt="RifleBird in the field" /><span className="play-button">▶</span></div>
               <div className="video-bar"><span /> <small>0:00 / 1:48</small></div>
-            </article>
+            </article> */}
           </div>
         </section>
 
-        <section className="riflebird-integration riflebird-panel">
+        {/* <section className="riflebird-integration riflebird-panel">
           <p className="riflebird-section-label">INTEGRATES WITH WHAT YOU ALREADY USE</p>
           <div className="integration-list"><span>HANDHELD TABLETS</span><span>TACTICAL RADIOS</span><span>VEHICLE SYSTEMS</span><span>COMMAND SOFTWARE</span><span>MISSION PLANNING TOOLS</span><span>NATO / STANAG COMPATIBLE</span></div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

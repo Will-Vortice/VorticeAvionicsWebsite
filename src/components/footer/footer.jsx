@@ -20,13 +20,13 @@ function Footer() {
           <p className="site-footer-label">EXPLORE</p>
           <Link to="/">Home</Link>
           <Link to="/riflebird">RifleBird</Link>
-          <Link to="/directory">Directory</Link>
+          
         </div>
 
         <div className="site-footer-column">
           <p className="site-footer-label">CONNECT</p>
           <button type="button" onClick={openContact}>Request information</button>
-          <a href="mailto:info@vorticeavionics.com">Email the team</a>
+          {/* <a href="mailto:info@vorticeavionics.com">Email the team</a> */}
         </div>
       </div>
 

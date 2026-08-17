@@ -36,7 +36,7 @@
 .hero-section {
   display: flex;
   justify-content: center;
-  padding: 6rem 0 4rem;
+  padding: 0 0 4rem;
   isolation: isolate;
 }
 
