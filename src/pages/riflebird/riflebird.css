@@ -11,7 +11,9 @@
 
 .riflebird-content {
   padding-top: 6rem;
-  min-height: 100vh;
+  padding-bottom: 3rem;
+  width: min(100% - 3rem, 1500px);
+  margin: 0 auto;
 }
 
 .riflebird-hero {
@@ -22,6 +24,278 @@
   padding: 4rem;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.riflebird-capabilities,
+.riflebird-panel {
+  border: 1px solid rgba(151, 183, 201, .18);
+  background: linear-gradient(135deg, rgba(7, 19, 28, .92), rgba(3, 8, 13, .96));
+}
+
+.riflebird-capabilities {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0 auto 1.5rem;
+}
+
+.riflebird-capability {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  min-width: 0;
+  padding: 1rem .8rem;
+  border-right: 1px solid rgba(151, 183, 201, .14);
+}
+
+.riflebird-capability:last-child {
+  border-right: 0;
+}
+
+.riflebird-capability img {
+  width: 2.2rem;
+  height: 2.2rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.riflebird-capability h2,
+.riflebird-capability p,
+.riflebird-panel h2,
+.riflebird-panel p {
+  margin: 0;
+}
+
+.riflebird-capability h2 {
+  font: 700 .58rem/1.2 Inter, sans-serif;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.riflebird-capability p {
+  margin-top: .35rem;
+  color: rgba(242, 242, 242, .58);
+  font: .58rem/1.4 Inter, sans-serif;
+}
+
+.riflebird-details,
+.riflebird-media-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, .9fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.riflebird-panel {
+  padding: 1.25rem;
+}
+
+.riflebird-section-label {
+  color: #009bde;
+  font: 700 .7rem/1.2 Inter, sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.how-it-works {
+  min-height: 430px;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-it-works > h2 {
+  margin-top: .8rem;
+  font: 400 clamp(1.5rem, 2.7vw, 2.4rem)/.95 Teko, sans-serif;
+  letter-spacing: .03em;
+}
+
+.riflebird-panel-copy {
+  max-width: 330px;
+  margin-top: .8rem !important;
+  color: rgba(242, 242, 242, .66);
+  font: .68rem/1.55 Inter, sans-serif;
+}
+
+.process-list {
+  display: grid;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 2;
+  width: min(52%, 350px);
+  margin-top: 1rem;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 1.5rem 1.25rem 1fr;
+  align-items: center;
+  gap: .5rem;
+}
+
+.process-step img {
+  width: 3.95rem;
+  height: 1.95rem;
+  object-fit: cover;
+}
+
+.process-number {
+  color: rgba(242, 242, 242, .4);
+  font: .75rem Inter, sans-serif;
+}
+
+.process-step h3 {
+  margin: 0;
+  color: #009bde;
+  font: 700 .58rem Inter, sans-serif;
+  text-transform: uppercase;
+}
+
+.process-step p {
+  margin-top: .15rem;
+  color: rgba(242, 242, 242, .56);
+  font: .56rem/1.35 Inter, sans-serif;
+}
+
+.theater-image {
+  position: absolute;
+  right: -4%;
+  bottom: 0;
+  width: 67%;
+  max-height: 90%;
+  object-fit: cover;
+  opacity: .72;
+  mask-image: linear-gradient(to right, transparent 0%, black 17%);
+}
+
+.specs-panel dl {
+  margin: .8rem 0 0;
+}
+
+.specs-panel dl div {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: .5rem;
+  padding: .4rem 0;
+  border-bottom: 1px solid rgba(151, 183, 201, .13);
+}
+
+.specs-panel dt,
+.specs-panel dd {
+  font: .62rem Inter, sans-serif;
+}
+
+.specs-panel dt {
+  color: rgba(242, 242, 242, .58);
+  text-transform: uppercase;
+}
+
+.specs-panel dd {
+  margin: 0;
+  color: rgba(242, 242, 242, .84);
+}
+
+.gallery-panel {
+  min-height: 420px;
+}
+.gallery-tabs {
+  display: flex;
+  gap: 1.2rem;
+  margin: .85rem 0;
+  color: rgba(242, 242, 242, .42);
+  font: .52rem Inter, sans-serif;
+}
+
+.gallery-tabs .active {
+  color: #009bde;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .45rem;
+}
+
+.gallery-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+  border: 1px solid rgba(151, 183, 201, .15);
+  filter: saturate(.72) brightness(.75);
+}
+
+.riflebird-media-stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.blueprint-panel img {
+  display: block;
+  width: 100%;
+  margin-top: .75rem;
+  opacity: .65;
+}
+
+.overview-image {
+  position: relative;
+  margin-top: .75rem;
+}
+
+.overview-image img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  filter: brightness(.62) saturate(.7);
+}
+
+.play-button {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: .8rem;
+}
+
+.video-bar {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin-top: .65rem;
+  color: rgba(242, 242, 242, .5);
+  font: .55rem Inter, sans-serif;
+}
+
+.video-bar span {
+  display: block;
+  height: 1px;
+  flex: 1;
+  background: #009bde;
+}
+
+.riflebird-integration {
+  margin-bottom: 1.5rem;
+}
+
+.integration-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.integration-list span {
+  padding: .7rem .4rem;
+  border-right: 1px solid rgba(151, 183, 201, .14);
+  color: rgba(242, 242, 242, .6);
+  text-align: center;
+  font: .55rem/1.35 Inter, sans-serif;
+  text-transform: uppercase;
 }
 
 .riflebird-copy {
@@ -112,24 +386,114 @@
 }
 
 .riflebird-image {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-height: 400px;
+  animation: riflebird-fly-in 4.5s cubic-bezier(.22, .61, .36, 1) both;
+  will-change: transform, opacity;
 }
 
-.riflebird-image img {
+.riflebird-image-video {
+  display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
-  display: block;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: center;
   filter: brightness(1.1) contrast(1.05);
+  animation: riflebird-hover 5s ease-in-out 4.5s infinite;
+  will-change: transform;
+}
+
+@keyframes riflebird-fly-in {
+  0% {
+    opacity: 0;
+    transform: translate(75vw, -110vh) scale(.8) rotate(18deg);
+  }
+
+  35% {
+    opacity: .72;
+    transform: translate(38vw, -42vh) scale(.9) rotate(9deg);
+  }
+
+  68% {
+    opacity: 1;
+    transform: translate(-1rem, 1.5rem) scale(1.02) rotate(-1deg);
+  }
+
+  86% {
+    transform: translate(.35rem, -.45rem) scale(1) rotate(.35deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes riflebird-hover {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-.6rem) rotate(.35deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .riflebird-image,
+  .riflebird-image-video {
+    animation: none;
+  }
+}
+
+.riflebird-image-video:focus-visible {
+  outline: 1px solid #009bde;
+  outline-offset: .35rem;
 }
 
 @media (max-width: 1024px) {
+  .riflebird-image-video {
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 720px) {
+  .riflebird-image-video {
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .riflebird-content {
+    width: min(100% - 2rem, 1500px);
+  }
   .riflebird-hero {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem;
+  }
+
+  .riflebird-capabilities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .riflebird-capability:nth-child(3) {
+    border-right: 0;
+  }
+
+  .riflebird-details,
+  .riflebird-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .integration-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -144,6 +508,35 @@
 
   .riflebird-hero {
     padding: 1.5rem;
+  }
+
+  .riflebird-capabilities {
+    grid-template-columns: 1fr;
+  }
+  .riflebird-capability,
+  .riflebird-capability:nth-child(3) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(151, 183, 201, .14);
+  }
+
+  .riflebird-capability:last-child {
+    border-bottom: 0;
+  }
+  .process-list {
+    width: 100%;
+  }
+
+  .theater-image {
+    position: relative;
+    right: auto;
+    width: 100%;
+    max-height: none;
+    margin-top: 1rem;
+    mask-image: none;
+  }
+
+  .integration-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .riflebird-actions {
