@@ -12,7 +12,7 @@ import EngageIcon from '../../assets/EngageIcon.png'
 import StrikeIcon from '../../assets/StrikeIcon.png'
 import solutionImageMain from '../../assets/RifleBirdBackground.png'
 import solutionImageFeature from "../../assets/TransparentRifleBirdFlying.webm"
-import blueprint from '../../assets/stockBlueprint.png'
+import blueprint from '../../assets/Riflebird Blueprint.png'
 import './hero.css'
 
 const featureItems = [
@@ -122,7 +122,13 @@ function ProductSpotlight() {
           </Link>
         </div>
         <div className="product-image-frame">
-          <img src={blueprint} alt="RifleBird blueprint" className="product-image" />
+          <img
+            src={blueprint}
+            alt="RifleBird blueprint"
+            className="product-image"
+            loading="lazy"
+            onLoad={(event) => event.currentTarget.classList.add('is-loaded')}
+          />
         </div>
       </div>
     </section>
@@ -191,7 +197,13 @@ export default function Hero() {
 
           <div className="solution-media-panel">
             <div className="solution-media-frame">
-              <img className="solution-media-main" src={solutionImageMain} alt="RifleBird platform" />
+              <img
+                className="solution-media-main"
+                src={solutionImageMain}
+                alt="RifleBird platform"
+                loading="lazy"
+                onLoad={(event) => event.currentTarget.classList.add('is-loaded')}
+              />
               {/* <img className="solution-media-tilt" src={solutionImageFeature} alt="RifleBird deployment" /> */}
               <video  autoPlay loop muted playsInline className="solution-media-tilt" alt="RifleBird deployment" >
                 <source src={solutionImageFeature} type="video/webm" />

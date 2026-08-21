@@ -49,6 +49,8 @@ function Directory() {
                         src={employee.image}
                         alt={employee.name}
                         className="employee-photo"
+                        loading="lazy"
+                        onLoad={(event) => event.currentTarget.classList.add('is-loaded')}
                       />
                     </div>
 

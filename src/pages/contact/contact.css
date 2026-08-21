@@ -1,12 +1,12 @@
 .contact-container {
   min-height: 100vh;
-  padding: 1rem 1.5rem;
+  padding: 1rem 0;
   position: relative;
   overflow-y: auto;
 }
 
 .contact-content {
-  max-width: 80%;
+  width: min(1400px, calc(100% - 4rem));
   margin: 0 auto;
 }
 
@@ -277,7 +277,11 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .contact-container {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
+  }
+
+  .contact-content {
+    width: min(100% - 2rem, 1400px);
   }
 
   .contact-header {
@@ -338,8 +342,12 @@
 
 @media (max-width: 480px) {
   .contact-container {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0;
     margin: auto;
+  }
+
+  .contact-content {
+    width: min(100% - 1.5rem, 1400px);
   }
 
   .contact-title {

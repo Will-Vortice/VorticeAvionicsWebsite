@@ -6,7 +6,6 @@ import './layout.css'
 function Layout() {
     return(
         <div className="page-layout">
-            <TechBackground />
             <main>
                 <Outlet />
             </main>

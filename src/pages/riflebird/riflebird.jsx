@@ -51,9 +51,8 @@ export default function RifleBird() {
 
   return (
     <div className="riflebird-page">
-      <Navbar requestLabel="REQUEST INFO" requestPath="/contact" />
-
       <main className="riflebird-content">
+        <Navbar requestLabel="REQUEST INFO" requestPath="/contact" />
         <section className="riflebird-hero">
           <div className="riflebird-copy">
             <p className="riflebird-breadcrumb">PRODUCTS / RIFLEBIRD</p>
@@ -110,7 +109,13 @@ export default function RifleBird() {
                 </div>
               ))}
             </div>
-            <img className="theater-image" src={theaterImage} alt="RifleBird mission sequence" />
+            <img
+              className="theater-image"
+              src={theaterImage}
+              alt="RifleBird mission sequence"
+              loading="lazy"
+              onLoad={(event) => event.currentTarget.classList.add('is-loaded')}
+            />
           </article>
 
           <article className="riflebird-panel specs-panel">
@@ -126,14 +131,27 @@ export default function RifleBird() {
             <p className="riflebird-section-label">GALLERY</p>
             <div className="gallery-tabs"></div>
             <div className="gallery-grid">
-              {galleryImages.map((image, index) => <img key={`${image}-${index}`} src={image} alt={`RifleBird gallery ${index + 1}`} />)}
+              {galleryImages.map((image, index) => (
+                <img
+                  key={`${image}-${index}`}
+                  src={image}
+                  alt={`RifleBird gallery ${index + 1}`}
+                  loading="lazy"
+                  onLoad={(event) => event.currentTarget.classList.add('is-loaded')}
+                />
+              ))}
             </div>
           </article>
 
           <div className="riflebird-media-stack">
             <article className="riflebird-panel blueprint-panel">
               <p className="riflebird-section-label">BLUEPRINTS</p>
-              <img src={blueprintImage} alt="RifleBird technical blueprint" />
+              <img
+                src={blueprintImage}
+                alt="RifleBird technical blueprint"
+                loading="lazy"
+                onLoad={(event) => event.currentTarget.classList.add('is-loaded')}
+              />
             </article>
             {/* <article className="riflebird-panel overview-panel">
               <p className="riflebird-section-label">PRODUCT OVERVIEW</p>
