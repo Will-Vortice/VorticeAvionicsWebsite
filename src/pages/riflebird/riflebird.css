@@ -21,8 +21,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  padding: 4rem;
-  max-width: 1600px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -248,7 +249,7 @@
   aspect-ratio: 3 / 2;
   object-fit: contain;
   margin-top: .75rem;
-  background-color: rgba(151, 183, 201, .08);
+  background-color: transparent;
   opacity: 0;
   transition: opacity .35s ease;
 }
@@ -325,6 +326,13 @@
   flex-direction: column;
   gap: 1.5rem;
   max-width: 620px;
+}
+
+.riflebird-copy-header,
+.riflebird-copy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .riflebird-breadcrumb {
@@ -492,8 +500,14 @@
     padding-top: 2rem;
   }
 
+  .riflebird-image {
+    animation: none;
+    opacity: 1;
+  }
+
   .riflebird-image-video {
     max-height: 320px;
+    animation: riflebird-hover 5s ease-in-out infinite;
   }
 }
 
@@ -505,6 +519,22 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem;
+  }
+
+  .riflebird-copy {
+    display: contents;
+  }
+
+  .riflebird-copy-header {
+    order: 1;
+  }
+
+  .riflebird-image {
+    order: 2;
+  }
+
+  .riflebird-copy-body {
+    order: 3;
   }
 
   .riflebird-capabilities {

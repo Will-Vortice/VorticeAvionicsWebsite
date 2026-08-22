@@ -161,6 +161,26 @@
   background: rgba(0, 155, 222, 0.12);
 }
 
+.mobile-request-info-link {
+  margin-top: 0.4rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid #009bde;
+  background: rgba(0, 155, 222, 0.08);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 180ms ease;
+}
+
+.mobile-request-info-link:hover {
+  background: #009bde;
+}
+
 @media (max-width: 900px) {
   .navigation {
     padding: 1rem 1rem 0;
@@ -184,7 +204,7 @@
 
 @media (max-width: 640px) {
   .nav-container {
-    padding: 0.7rem 0.9rem;
+    padding: 0;
   }
 
   .logo-image {

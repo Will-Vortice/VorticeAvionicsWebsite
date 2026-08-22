@@ -55,22 +55,27 @@ export default function RifleBird() {
         <Navbar requestLabel="REQUEST INFO" requestPath="/contact" />
         <section className="riflebird-hero">
           <div className="riflebird-copy">
-            <p className="riflebird-breadcrumb">PRODUCTS / RIFLEBIRD</p>
-            <h1 className="riflebird-title">RIFLEBIRD</h1>
-            <p className="riflebird-subtitle">SOLDIER-CONTROLLED, PRECISION STRIKE.</p>
-            <p className="riflebird-description">
-              RifleBird is a rapidly deployable, semi-autonomous strike system that enables soldiers to deliver
-              precise effects with minimal training and input - anywhere, anytime
-            </p>
+            <div className="riflebird-copy-header">
+              <p className="riflebird-breadcrumb">PRODUCTS / RIFLEBIRD</p>
+              <h1 className="riflebird-title">RIFLEBIRD</h1>
+            </div>
 
-            <div className="riflebird-actions">
-              <button className="riflebird-primary-cta" onClick={openContact}>
-                REQUEST INFO
-              </button>
-              {/* TODO: BUTTON COMMENTED OUT, AWAITING VIDEO/DEMO */}
-              {/* <button className="riflebird-secondary-cta">
-                WATCH OVERVIEW
-              </button> */}
+            <div className="riflebird-copy-body">
+              <p className="riflebird-subtitle">SOLDIER-CONTROLLED, PRECISION STRIKE.</p>
+              <p className="riflebird-description">
+                RifleBird is a rapidly deployable, semi-autonomous strike system that enables soldiers to deliver
+                precise effects with minimal training and input - anywhere, anytime
+              </p>
+
+              <div className="riflebird-actions">
+                <button className="riflebird-primary-cta" onClick={openContact}>
+                  REQUEST INFO
+                </button>
+                {/* TODO: BUTTON COMMENTED OUT, AWAITING VIDEO/DEMO */}
+                {/* <button className="riflebird-secondary-cta">
+                  WATCH OVERVIEW
+                </button> */}
+              </div>
             </div>
           </div>
 

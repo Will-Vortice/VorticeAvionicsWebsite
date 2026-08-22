@@ -71,6 +71,13 @@ function Navbar({ variant = 'default', links = defaultLinks, requestLabel = 'Req
               {link.name}
             </Link>
           ))}
+          <button
+            type="button"
+            className="mobile-request-info-link"
+            onClick={() => { openContact(); closeMenu() }}
+          >
+            {requestLabel}
+          </button>
         </div>
       </div>
     </nav>
