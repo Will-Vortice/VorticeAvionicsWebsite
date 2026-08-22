@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { motion, useReducedMotion } from 'motion/react'
 import Navbar from '../../components/nav/nav'
 import Footer from '../../components/footer/footer'
 import { useContactModal } from '../../components/contact/ContactModalProvider'
@@ -46,8 +48,25 @@ const specifications = [
 
 const galleryImages = [galleryOne, galleryTwo, galleryThree, galleryFour, galleryFive, gallerySix]
 
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(() => window.matchMedia(query).matches)
+
+  useEffect(() => {
+    const mql = window.matchMedia(query)
+    const handler = (event) => setMatches(event.matches)
+    mql.addEventListener('change', handler)
+    return () => mql.removeEventListener('change', handler)
+  }, [query])
+
+  return matches
+}
+
 export default function RifleBird() {
   const { openContact } = useContactModal()
+  const shouldReduceMotion = useReducedMotion()
+  const isMobile = useMediaQuery('(max-width: 720px)')
+  const skipIntro = shouldReduceMotion || isMobile
+  const [introComplete, setIntroComplete] = useState(skipIntro)
 
   return (
     <div className="riflebird-page">
@@ -80,9 +99,32 @@ export default function RifleBird() {
           </div>
 
           <div className="riflebird-image">
-            <video autoPlay loop muted playsInline className="riflebird-image-video" aria-label="RifleBird in flight">
-              <source src={RifleBirdFlying} type="video/webm" />
-            </video>
+            <motion.div
+              className="riflebird-image-inner"
+              initial={skipIntro ? false : { opacity: 0, x: 420, y: -320, scale: .82, rotate: 14 }}
+              animate={{ opacity: 1, x: 0, y: 0, scale: 1, rotate: 0 }}
+              transition={skipIntro ? { duration: 0 } : {
+                x: { type: 'spring', stiffness: 22, damping: 15, mass: 1.4 },
+                y: { type: 'spring', stiffness: 22, damping: 15, mass: 1.4 },
+                scale: { type: 'spring', stiffness: 22, damping: 15, mass: 1.4 },
+                rotate: { type: 'spring', stiffness: 22, damping: 15, mass: 1.4 },
+                opacity: { duration: 1.1, ease: 'easeOut' },
+              }}
+              onAnimationComplete={() => setIntroComplete(true)}
+            >
+              <motion.video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="riflebird-image-video"
+                aria-label="RifleBird in flight"
+                animate={introComplete && !shouldReduceMotion ? { y: [0, -18, 0] } : { y: 0 }}
+                transition={introComplete && !shouldReduceMotion ? { duration: 5, repeat: Infinity, ease: 'easeInOut' } : { duration: 0 }}
+              >
+                <source src={RifleBirdFlying} type="video/webm" />
+              </motion.video>
+            </motion.div>
           </div>
         </section>
 

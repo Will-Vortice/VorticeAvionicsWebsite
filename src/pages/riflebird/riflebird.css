@@ -422,8 +422,13 @@
   justify-content: center;
   width: 100%;
   min-height: 400px;
-  animation: riflebird-fly-in 4.2s linear both;
-  will-change: transform, opacity;
+}
+
+.riflebird-image-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .riflebird-image-video {
@@ -435,45 +440,6 @@
   object-fit: contain;
   object-position: center;
   filter: brightness(1.1) contrast(1.05);
-  animation: riflebird-hover 5s ease-in-out 4.2s infinite;
-  will-change: transform;
-}
-
-@keyframes riflebird-fly-in {
-  0% {
-    opacity: 0;
-    transform: translate(70vw, -100vh) scale(.82) rotate(14deg);
-    animation-timing-function: cubic-bezier(.11, .58, .28, .98);
-  }
-
-  55% {
-    opacity: 1;
-    transform: translate(4vw, -5vh) scale(.99) rotate(1.5deg);
-    animation-timing-function: ease-out;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotate(0deg);
-  }
-}
-
-@keyframes riflebird-hover {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-.6rem) rotate(.35deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .riflebird-image,
-  .riflebird-image-video {
-    animation: none;
-  }
 }
 
 .riflebird-image-video:focus-visible {
@@ -493,14 +459,8 @@
     padding-top: 2rem;
   }
 
-  .riflebird-image {
-    animation: none;
-    opacity: 1;
-  }
-
   .riflebird-image-video {
     max-height: 320px;
-    animation: riflebird-hover 5s ease-in-out infinite;
   }
 }
 
