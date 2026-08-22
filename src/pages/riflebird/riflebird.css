@@ -422,7 +422,7 @@
   justify-content: center;
   width: 100%;
   min-height: 400px;
-  animation: riflebird-fly-in 4.5s cubic-bezier(.22, .61, .36, 1) both;
+  animation: riflebird-fly-in 4.2s linear both;
   will-change: transform, opacity;
 }
 
@@ -435,28 +435,21 @@
   object-fit: contain;
   object-position: center;
   filter: brightness(1.1) contrast(1.05);
-  animation: riflebird-hover 5s ease-in-out 4.5s infinite;
+  animation: riflebird-hover 5s ease-in-out 4.2s infinite;
   will-change: transform;
 }
 
 @keyframes riflebird-fly-in {
   0% {
     opacity: 0;
-    transform: translate(75vw, -110vh) scale(.8) rotate(18deg);
+    transform: translate(70vw, -100vh) scale(.82) rotate(14deg);
+    animation-timing-function: cubic-bezier(.11, .58, .28, .98);
   }
 
-  35% {
-    opacity: .72;
-    transform: translate(38vw, -42vh) scale(.9) rotate(9deg);
-  }
-
-  68% {
+  55% {
     opacity: 1;
-    transform: translate(-1rem, 1.5rem) scale(1.02) rotate(-1deg);
-  }
-
-  86% {
-    transform: translate(.35rem, -.45rem) scale(1) rotate(.35deg);
+    transform: translate(4vw, -5vh) scale(.99) rotate(1.5deg);
+    animation-timing-function: ease-out;
   }
 
   100% {
